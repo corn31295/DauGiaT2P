@@ -40,14 +40,14 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="@Url.Content("~/Content/_Layout/")images/logo.png" alt="Site Logo"></a>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/_Layout/")images/logo.png" alt="Site Logo"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <nav id="main-menu" class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#main-slider">Trang Chủ</a></li>
                     <li><a href="#contact">Liên Hệ</a></li>
-                    <li><a>Đăng Nhập</a></li>
+                    <li><a href="@Url.Action("Login","Account")">Đăng Nhập</a></li>
                     <li><a>Đăng Ký</a></li>
                 </ul>
             </nav><!-- /.navbar-collapse -->

@@ -41,6 +41,6 @@ c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\bin\System.
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.Razor.xml
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\bin\System.Web.Helpers.xml
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\bin\System.Web.Mvc.xml
-c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.csprojResolveAssemblyReference.cache
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.dll
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.pdb
+C:\Users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.csprojResolveAssemblyReference.cache
