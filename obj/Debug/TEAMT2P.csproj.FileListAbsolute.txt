@@ -43,4 +43,54 @@ c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\bin\System.
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\bin\System.Web.Mvc.xml
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.dll
 c:\users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.pdb
-C:\Users\ngotu\documents\visual studio 2015\Projects\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.csprojResolveAssemblyReference.cache
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\ApplicationInsights.config
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\csc.exe
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\vbc.exe
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\VBCSCompiler.exe
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\TEAMT2P.dll.config
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\TEAMT2P.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\TEAMT2P.pdb
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\BotDetect.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\BotDetect.Web.Mvc.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\EntityFramework.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\EntityFramework.SqlServer.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.Web.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.ApplicationInsights.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Helpers.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Mvc.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Razor.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.Deployment.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.Razor.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\EntityFramework.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\EntityFramework.SqlServer.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.Web.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.ApplicationInsights.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Razor.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.Deployment.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Webpages.Razor.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Helpers.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\bin\System.Web.Mvc.xml
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.csprojResolveAssemblyReference.cache
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.dll
+C:\Users\TIN\Desktop\TEAMT2P\TEAMT2P\obj\Debug\TEAMT2P.pdb

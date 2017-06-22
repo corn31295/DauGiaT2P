@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using TEAMT2P.Helpers
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -29,7 +31,7 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/_Layout/")assets/css/responsive.min.css">
     <!-- Include Modernizer Js -->
     <script src="@Url.Content("~/Content/_Layout/")assets/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
+    @RenderSection("css", false)
 </head>
 <body>
     <!-- Header Section -->
@@ -45,13 +47,30 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <nav id="main-menu" class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
+@if (CurrentContext.IsLogged() == false) {
                     <li class="active"><a href="#main-slider">Trang Chủ</a></li>
                     <li><a href="#contact">Liên Hệ</a></li>
                     <li><a href="@Url.Action("Login","Account")">Đăng Nhập</a></li>
-                    <li><a>Đăng Ký</a></li>
+                    <li><a href="@Url.Action("Register","Account")">Đăng Ký</a></li>
+}
+else
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="separator">
+            @CurrentContext.GetCurUser().f_Username <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="#" class="menu-item">Personal Information</a></li>
+            <li class="divider"></li>
+            <li><a id="logoutLink" href="javascript:;" class="menu-item">Exit</a></li>
+
+        </ul>
+    </li>
+}
                 </ul>
             </nav><!-- /.navbar-collapse -->
         </div><!-- /.container -->
+        <form id="frmLogout" method="post" action="@Url.Action("Logout","Account")"></form>
     </header><!-- /#masthead -->
     <!-- Header Section -->
 
@@ -93,7 +112,7 @@
     </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    @*<section id="contact" class="contact">
         <div class="contact-inner">
             <div id="google-map" class="google-map">
                 <div id="googleMaps" class="google-map-container"></div>
@@ -108,7 +127,7 @@
                 </form><!-- /#contactform -->
             </div><!-- /.form-area -->
         </div><!-- /.contact-inner -->
-    </section>
+    </section>*@
     <!-- Contact Section -->
 
     <div class="footer-bottom">
@@ -152,7 +171,13 @@
     $(".bxslider").bxSlider({auto:!0,preloadImages:"all",mode:"horizontal",captions:!1,controls:!0,pause:4000,speed:1200,onSliderLoad:function(){$(".bxslider>li .slide-inner").eq(1).addClass("active-slide"),$(".slide-inner.active-slide .slider-title").addClass("wow animated bounceInDown"),$(".slide-inner.active-slide .slide-description").addClass("wow animated bounceInRight"),$(".slide-inner.active-slide .btn").addClass("wow animated zoomInUp")},onSlideAfter:function(e,i,n){console.log(n),$(".active-slide").removeClass("active-slide"),$(".bxslider>li .slide-inner").eq(n+1).addClass("active-slide"),$(".slide-inner.active-slide").addClass("wow animated bounceInRight")},onSlideBefore:function(){$(".slide-inner.active-slide").removeClass("wow animated bounceInRight"),$(".one.slide-inner.active-slide").removeAttr("style")}}),$(document).ready(function(){function e(){return"ontouchstart"in document.documentElement}function i(){if("undefined"!=typeof google){var i={center:[-37.817331,144.955652],zoom:15,mapTypeControl:!0,mapTypeControlOptions:{style:google.maps.MapTypeControlStyle.DROPDOWN_MENU},navigationControl:!0,scrollwheel:!1,streetViewControl:!0};e()&&(i.draggable=!1),$("#googleMaps").gmap3({map:{options:i},marker:{latLng:[23.709921,90.407143],options:{icon:"images/mapicon.png"}}})}}$("#masthead #main-menu").onePageNav(),i()}),$("#contactform").on("submit",function(e){e.preventDefault(),$this=$(this),$.ajax({type:"POST",url:$this.attr("action"),data:$this.serialize(),success:function(){alert("Message Sent Successfully")}})});
 
     </script>
+    <script type="text/javascript">
+    $('#logoutLink').on('click', function () {
+        $('#frmLogout').submit();
+    });
+    </script>
 
+    @RenderSection("js", false)
 
 </body>
 </html>

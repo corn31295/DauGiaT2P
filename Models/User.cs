@@ -21,5 +21,6 @@ namespace TEAMT2P.Models
         public string f_Email { get; set; }
         public System.DateTime f_DOB { get; set; }
         public int f_Permission { get; set; }
+        public string f_Address { get; set; }
     }
 }

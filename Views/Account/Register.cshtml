@@ -1,0 +1,174 @@
+﻿@using BotDetect.Web.Mvc;
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Register</h1>
+
+@section css{
+<link href="~/Content/_Layout/assets/bootstrap-datepicker-master/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <style type="text/css">
+        label{
+            font-weight:normal !important;
+        }
+        </style>
+<link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl" rel="stylesheet" type="text/css" />
+ }
+@section js {
+<script src="~/Content/_Layout/assets/jquery.validation/jquery.validate.min.js"></script>
+<script src="~/Content/_Layout/assets/bootstrap-datepicker-master/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript">
+        $('.datepicker').datepicker({
+            format: 'd/m/yyyy',
+            autoclose: true,
+        });
+    </script>
+    <script type="text/javascript">
+        $('#frmRegister').validate({
+            rules: {
+                Username: {
+                    required: true
+                },
+                RawPWD: {
+                    required: true,
+                    minlength : 6
+                },
+                CPWD:{
+                    equalTo: '#txtPWD'
+                },
+                Name: {
+                    required: true
+                },
+                Address: {
+                    required: true
+                },
+                Email: {
+                    required: true
+                },
+                DOB: {
+                    required: true
+                },
+            },
+            messages: {
+                Username: {
+                    required: 'Please enter the Username. '
+                },
+                RawPWD: {
+                    required: 'Please enter the Password. ',
+                    minlength: 'Password length must be at least 6 characters'
+                },
+                CPWD: {
+                    equalTo: 'the confirm password enter is not correct'
+                },
+                Name: {
+                    required: 'Please enter the Name. '
+                },
+                Address: {
+                    required: 'Please enter the Address. '
+                },
+                Email: {
+                    required: 'Please enter the Email. '
+                },
+                DOB: {
+                    required: 'Please enter the Date of Birth. '
+                },
+            },
+
+        });
+    </script>
+    
+
+    }
+@if (ViewBag.ErrorMsg != null)
+{
+    <div role="alert">
+        <strong style="color:red">Warning!</strong> @ViewBag.ErrorMsg
+    </div>
+}
+@if (ViewBag.Msg != null)
+{
+    <div role="alert">
+        @ViewBag.Msg
+    </div>
+}
+
+<form class="form-horizontal" method="post" action="" id="frmRegister" >
+
+    <div class="form-group">
+        <label for="txtUsername" class="col-sm-2 control-label">Username</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="Username">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtPWD" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-4">
+            <input type="password" class="form-control" id="txtPWD" placeholder="Password" name="RawPWD">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtCPWD" class="col-sm-2 control-label">Confirm Password</label>
+        <div class="col-sm-4">
+            <input type="password" class="form-control" id="txtCPWD" placeholder="Confirm Password" name="CPWD">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtName" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="txtName" placeholder="Name" name="Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtadr" class="col-sm-2 control-label">Address</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="txtadr" placeholder="Address" name="Address">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtEmail" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-4">
+            <input type="email" class="form-control" id="txtEmail" placeholder="Email" name="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtDOB" class="col-sm-2 control-label">Date of Birth</label>
+        <div class="col-sm-4">
+            <input type="datetime" class="form-control datepicker" id="txtDOB" placeholder="Date of Birth" name="DOB">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+                @{ 
+                    var exampleCaptcha = new MvcCaptcha("ExampleCaptcha");
+                    exampleCaptcha.Reset();
+                 }
+                @Html.Captcha(exampleCaptcha)
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="CaptchaCode" class="col-sm-2 control-label">Captcha</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="txtCaptchaCode" placeholder="Captcha" name="CaptchaCode">
+        </div>
+    </div>
+    @*<div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+        </div>
+    </div>*@
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">
+                <i class="fa fa-check"></i>
+            Sign in
+            </button>
+        </div>
+    </div>
+</form>
+
+
+
