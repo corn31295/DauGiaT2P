@@ -485,12 +485,24 @@
     <Content Include="Content\_Layout\tile-wide.png" />
     <Content Include="Content\_Layout\tile.png" />
     <Content Include="Global.asax" />
+    <Content Include="Models\QLBH.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+      <LastGenOutput>QLBH.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\QLBH.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+      <LastGenOutput>QLBH.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -552,23 +564,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <EntityDeploy Include="Models\QLBH.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLBH.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\QLBH.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLBH.edmx</DependentUpon>
-      <LastGenOutput>QLBH.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\QLBH.edmx.diagram">
-      <DependentUpon>QLBH.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\QLBH.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLBH.edmx</DependentUpon>
-      <LastGenOutput>QLBH.cs</LastGenOutput>
-    </Content>
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\.editorconfig" />
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\.github\ISSUE_TEMPLATE.md" />
@@ -610,6 +605,15 @@
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\README.md" />
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\tests\README.md" />
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\yarn.lock" />
+    <EntityDeploy Include="Models\QLBH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QLBH.edmx.diagram">
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Category\ListPartial.cshtml" />
+    <Content Include="Views\Product\ByCat.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

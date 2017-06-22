@@ -107,8 +107,36 @@ else
     </section><!-- /#main-slider -->
     <!-- Main Slider -->
 
-    <div>
-        @RenderBody()
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Danh Mục</div>
+                    <div class="panel-body">
+                        @Html.Action("List", "Category")
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Hãng Sản Xuất</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="panel panel-default">
+                    @*<div class="panel-heading">
+                        @RenderSection("view_title")
+                    </div>*@
+                    <div class="panel-body">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!-- Contact Section -->

@@ -54,6 +54,7 @@
           <ScalarProperty Name="f_Email" ColumnName="f_Email" />
           <ScalarProperty Name="f_DOB" ColumnName="f_DOB" />
           <ScalarProperty Name="f_Permission" ColumnName="f_Permission" />
+          <ScalarProperty Name="f_Address" ColumnName="f_Address" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

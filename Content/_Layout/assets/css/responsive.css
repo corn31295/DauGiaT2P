@@ -914,6 +914,7 @@
     }
     #main-slider {
         height: 50px;
+		  padding-bottom: 3%;
     }
     .bx-wrapper {
         display: none;
