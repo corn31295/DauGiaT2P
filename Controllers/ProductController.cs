@@ -51,6 +51,25 @@ namespace TEAMT2P.Controllers
 
         }
 
+        //
+        // GET: /Product/Detail
+        public ActionResult Detail(int? id)
+        {
+            if (id.HasValue == false)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            using (var ctx = new QLBHEntities())
+            {
+                var model = ctx.Products
+                   .Where(p => p.ProID == id)
+                   .FirstOrDefault();
+
+
+                return View(model);
+            }
+        }
 
     }
 }
