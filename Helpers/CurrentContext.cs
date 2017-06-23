@@ -22,6 +22,17 @@ namespace TEAMT2P.Helpers
             return (User)HttpContext.Current.Session["user"];
         }
 
+        public static WatchList GetWL()
+        {
+            var ret = (WatchList)HttpContext.Current.Session["wl"];
+            if (ret == null)
+            {
+                ret = new WatchList();
+                HttpContext.Current.Session["wl"] = ret;
+            }
+            return ret;
+        }
+
         public static void Destroy()
         {
             HttpContext.Current.Session["isLogin"] = 0;

@@ -623,11 +623,13 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\WLController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CurrentContext.cs" />
     <Compile Include="Helpers\StringUtils.cs" />
+    <Compile Include="Helpers\WatchList.cs" />
     <Compile Include="Models\Category.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
@@ -747,6 +749,8 @@
     <Folder Include="Content\Login\" />
     <Folder Include="Imgs\sp\36\" />
     <Folder Include="Imgs\sp\43\" />
+    <Folder Include="Views\WatchList\" />
+    <Folder Include="Views\WL\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
