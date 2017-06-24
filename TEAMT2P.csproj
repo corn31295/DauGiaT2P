@@ -622,17 +622,17 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\WLController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CurrentContext.cs" />
     <Compile Include="Helpers\StringUtils.cs" />
-    <Compile Include="Helpers\WatchList.cs" />
     <Compile Include="Models\Category.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Edit.cs" />
     <Compile Include="Models\LoginVM.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
@@ -640,6 +640,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Password.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
@@ -737,6 +738,8 @@
     <Content Include="Views\Category\ListPartial.cshtml" />
     <Content Include="Views\Product\ByCat.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Members\Edit.cshtml" />
+    <Content Include="Views\Members\PasswordChange.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -749,8 +752,6 @@
     <Folder Include="Content\Login\" />
     <Folder Include="Imgs\sp\36\" />
     <Folder Include="Imgs\sp\43\" />
-    <Folder Include="Views\WatchList\" />
-    <Folder Include="Views\WL\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

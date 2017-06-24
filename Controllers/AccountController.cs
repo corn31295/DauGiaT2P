@@ -38,7 +38,7 @@ namespace TEAMT2P.Controllers
                 }
                 else
                 {
-                    ViewBag.ErrorMsg = "Fail to Sigin!!!";
+                    ViewBag.ErrorMsg = "Đăng nhập thất bại!!!";
                     return View();
                 }
             }
@@ -68,7 +68,7 @@ namespace TEAMT2P.Controllers
             if (!ModelState.IsValid)
             {
                 // TODO: Captcha validation failed, show error message
-                ViewBag.ErrorMsg = "Incorrect CAPTCHA code!";
+                ViewBag.ErrorMsg = "Nhập sai mã CAPTCHA code!";
 
             }
             else
@@ -89,10 +89,13 @@ namespace TEAMT2P.Controllers
                 {
                     ctx.Users.Add(u);
                     ctx.SaveChanges();
-                    ViewBag.Msg = "Success!";
+                    ViewBag.Msg = "Đăng ký thành công !";
                 }
             }
             return View();
         }
+
+        
+
     }
 }

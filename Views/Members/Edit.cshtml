@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TEAMT2P.Models.User
+
+<div class="container">
+    <h1>Chỉnh sửa thông tin cá nhân</h1>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-sm-2">
+            <div class="text-center">
+                <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                <h6>Chỉnh sửa ảnh</h6>
+
+                <input type="file" class="form-control">
+            </div>
+        </div>
+
+        <!-- edit form column -->
+        <div class="col-sm-7 personal-info">
+            <form class="form-horizontal" role="form" id="frmEdit" method="post">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Họ Tên:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" value="@Model.f_Name" name="f_Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Email:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" type="email" value="@Model.f_Email" name="f_Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Địa chỉ:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" value="@Model.f_Address" name="f_Address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Ngày sinh:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" type="datetime" value="@Model.f_DOB" name="f_DOB">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-md-8">
+                        <button type="submit" class="btn btn-success">
+                            Lưu thay đổi
+                        </button>
+                    </div>
+                </div>
+                @if (ViewBag.Msg != null)
+                {
+                    <div role="alert" style="color:green">
+                        @ViewBag.Msg
+                    </div>
+                }
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,4 @@
 ﻿@using TEAMT2P.Models
-@using TEAMT2P.Helpers;
-{
-
-}
 
 @model Product
 
@@ -59,19 +55,5 @@ else
             @Html.Raw(Model.FullDes)
         </div>
     </div>
-
-    @if (CurrentContext.IsLogged())
-    {
-        <form class="form-horizontal" method="post" action="@Url.Action("Add","WL")">
-            <div>
-                <input type="hidden" id="txtP" name="proId" value="@Model.ProID" />
-                <button type="button" class="btn btn-info glyphicon-star">Thêm vào Yêu thích</button>
-            </div>
-        </form>
-    }
 }
-
-
-
-
 

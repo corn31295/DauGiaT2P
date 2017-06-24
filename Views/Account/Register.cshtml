@@ -1,9 +1,9 @@
 ﻿@using BotDetect.Web.Mvc;
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Đăng ký";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Register</h1>
+<h1>Đăng ký</h1>
 
 @section css{
 <link href="~/Content/_Layout/assets/bootstrap-datepicker-master/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
@@ -85,41 +85,36 @@
         <strong style="color:red">Warning!</strong> @ViewBag.ErrorMsg
     </div>
 }
-@if (ViewBag.Msg != null)
-{
-    <div role="alert">
-        @ViewBag.Msg
-    </div>
-}
+
 
 <form class="form-horizontal" method="post" action="" id="frmRegister" >
 
     <div class="form-group">
-        <label for="txtUsername" class="col-sm-2 control-label">Username</label>
+        <label for="txtUsername" class="col-sm-2 control-label">Tên đăng nhập</label>
         <div class="col-sm-4">
             <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="Username">
         </div>
     </div>
     <div class="form-group">
-        <label for="txtPWD" class="col-sm-2 control-label">Password</label>
+        <label for="txtPWD" class="col-sm-2 control-label">Mật khẩu</label>
         <div class="col-sm-4">
             <input type="password" class="form-control" id="txtPWD" placeholder="Password" name="RawPWD">
         </div>
     </div>
     <div class="form-group">
-        <label for="txtCPWD" class="col-sm-2 control-label">Confirm Password</label>
+        <label for="txtCPWD" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
         <div class="col-sm-4">
             <input type="password" class="form-control" id="txtCPWD" placeholder="Confirm Password" name="CPWD">
         </div>
     </div>
     <div class="form-group">
-        <label for="txtName" class="col-sm-2 control-label">Name</label>
+        <label for="txtName" class="col-sm-2 control-label">Họ Tên</label>
         <div class="col-sm-4">
             <input type="text" class="form-control" id="txtName" placeholder="Name" name="Name">
         </div>
     </div>
     <div class="form-group">
-        <label for="txtadr" class="col-sm-2 control-label">Address</label>
+        <label for="txtadr" class="col-sm-2 control-label">Địa chỉ</label>
         <div class="col-sm-4">
             <input type="text" class="form-control" id="txtadr" placeholder="Address" name="Address">
         </div>
@@ -131,7 +126,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="txtDOB" class="col-sm-2 control-label">Date of Birth</label>
+        <label for="txtDOB" class="col-sm-2 control-label">Ngày Sinh</label>
         <div class="col-sm-4">
             <input type="datetime" class="form-control datepicker" id="txtDOB" placeholder="Date of Birth" name="DOB">
         </div>
@@ -164,10 +159,17 @@
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-success">
                 <i class="fa fa-check"></i>
-            Sign in
+            Đăng ký
             </button>
         </div>
     </div>
+
+    @if (ViewBag.Msg != null)
+    {
+        <div role="alert" style="color:green">
+            @ViewBag.Msg
+        </div>
+    }
 </form>
 
 
