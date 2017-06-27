@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+@model List<TEAMT2P.Models.Product>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Danh sách sản phẩm</title>
+</head>
+<body>
+    <div>
+        @Model.Count
+    </div>
+    <table border="1">
+        <tr>
+            <td>ProID</td>
+            <td>ProName</td>
+            <td>TinyDes</td>
+            <td>FullDes</td>
+            <td>ProName</td>
+            <td>Price</td>
+            <td>CatID</td>
+            <td>Quantity</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.ProID</td>
+                <td>@c.ProName</td>
+                <td>@c.TinyDes</td>
+                <td>@c.FullDes</td>
+                <td>@c.ProName</td>
+                <td>@c.Price</td>
+                <td>@c.CatID</td>
+                <td>@c.Quantity</td>
+                <td>
+                    <a href="@Url.Action("Detail", "Product", new { id = c.CatID })">Chi tiết</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "Product", new { id = c.CatID })">Xóa</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Product", new { id = c.CatID })">Chỉnh sửa</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a href="@Url.Action("Add", "Product")">
+        Thêm mới
+    </a>
+</body>
+</html>
+

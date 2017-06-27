@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+@model List<TEAMT2P.Models.Category>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Danh sách các mục</title>
+</head>
+<body>
+    <div>
+        @Model.Count
+    </div>
+    <table border="1">
+        <tr>
+            <td>Id</td>
+            <td>Category</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.CatID</td>
+                <td>@c.CatName</td>
+                <td>
+                    <a href="@Url.Action("Detail", "Category", new { id = c.CatID})">Chi tiết</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "Category", new { id = c.CatID})">Xóa</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Category", new { id = c.CatID})">Chỉnh sửa</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a href="@Url.Action("Add", "Category")">
+        Thêm mới
+    </a>
+</body>
+</html>
+

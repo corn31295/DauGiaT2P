@@ -71,5 +71,40 @@ namespace TEAMT2P.Controllers
             }
         }
 
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Category/Add
+        [HttpPost]
+        public ActionResult Add(Product model)
+        {
+            using (var ctx = new QLBHEntities())
+            {
+                ctx.Products.Add(model);
+                ctx.SaveChanges();
+            }
+            return View();
+        }
+
+        public ActionResult List()
+        {
+            using (var ctx = new QLBHEntities())
+            {
+                var list = ctx.Products.ToList();
+                return PartialView("ListPartial", list);
+            }
+        }
+
+        public ActionResult Index()
+        {
+            var ctx = new QLBHEntities();
+            var list = ctx.Products.ToList();
+            //ViewBag.List = list;
+            return View(list);
+        }
+
     }
 }

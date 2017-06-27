@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    Bạn muốn xóa danh mục có mã << @ViewBag.ID >>?
+    <br />
+    <a href="@Url.Action("Index", "Category")">Quay về</a>
+    <form method="post" action="">
+        <input type="hidden" value="@ViewBag.ID" name="idToDelete" />
+        <button type="submit">
+            Đồng ý xóa
+        </button>
+    </form>
+</body>
+</html>
+
+
