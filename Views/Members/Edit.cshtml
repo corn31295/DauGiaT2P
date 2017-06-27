@@ -1,8 +1,40 @@
-﻿@{
-    ViewBag.Title = "Edit";
+﻿@using TEAMT2P.Helpers
+@{
+    ViewBag.Title = "Quản lí thông tin cá nhân";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model TEAMT2P.Models.User
+
+@section js{   
+<script src="~/Content/_Layout/assets/jquery.validation/jquery.validate.min.js"></script>
+    <script type="text/javascript" >
+        $('#frmEdit').validate({
+            rules: {
+                RawPWD: {
+                    required:true
+                },
+                NRawPWD: {
+                    required: true,
+                    minlength : 6
+                },
+                CNRawPWD: {
+                    equalTo: '#txtNRawPWD'
+                },
+            },
+            messages: {
+                RawPWD: {
+                    required: 'Vui lòng nhập mật khẩu'
+                },
+                NRawPWD: {
+                    required: 'Vui lòng nhập mật khẩu',
+                    minlength: 'Độ dài mật khẩu phải ít nhất 6 kí tự'
+                },
+                CNRawPWD: {
+                    equalTo: 'Mật khẩu nhập lại không đúng'
+                },
+            },
+        });
+    </script>
+    }
 
 <div class="container">
     <h1>Chỉnh sửa thông tin cá nhân</h1>
@@ -23,25 +55,31 @@
                 <div class="form-group">
                     <label class="col-sm-4 control-label">Họ Tên:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="@Model.f_Name" name="f_Name">
+                        <input class="form-control" type="text" value="@CurrentContext.GetCurUser().f_Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Mật khẩu cũ:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="password" value="" name="RawPWD">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Mật khẩu mới:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="password" id="txtNRawPWD" value="" name="NRawPWD">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Nhập lại mật khẩu mới:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="password" id="txtCNRawPWD" name="CNRawPWD">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-4 control-label">Email:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="email" value="@Model.f_Email" name="f_Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-4 control-label">Địa chỉ:</label>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="@Model.f_Address" name="f_Address">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-4 control-label">Ngày sinh:</label>
-                    <div class="col-md-8">
-                        <input class="form-control" type="datetime" value="@Model.f_DOB" name="f_DOB">
+                        <input class="form-control" type="email" value="@CurrentContext.GetCurUser().f_Email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -52,13 +90,6 @@
                         </button>
                     </div>
                 </div>
-                @if (ViewBag.Msg != null)
-                {
-                    <div role="alert" style="color:green">
-                        @ViewBag.Msg
-                    </div>
-                }
-
             </form>
         </div>
     </div>
