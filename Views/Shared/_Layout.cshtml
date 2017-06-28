@@ -47,9 +47,23 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <nav id="main-menu" class="collapse navbar-collapse pull-right">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">     
+           
+
+                        @using (Html.BeginForm("KetQuaTimKiem", "Search", FormMethod.Post))
+                        {
+                        <li class=" nav navbar-default">
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </li>
+                            <li class="nav navbar-default">
+                                @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "form-control", @placeholder = "Nhập từ khóa cần tìm " })
+                            </li>
+                        }
+                               
 @if (CurrentContext.IsLogged() == false) {
-                    <li class="active"><a href="#main-slider">Trang Chủ</a></li>
+                    <li class="active"><a href="@Url.Action("Index","Home")">Trang Chủ</a></li>
                     <li><a href="#contact">Liên Hệ</a></li>
                     <li><a href="@Url.Action("Login","Account")">Đăng Nhập</a></li>
                     <li><a href="@Url.Action("Register","Account")">Đăng Ký</a></li>
@@ -62,6 +76,8 @@ else
         </a>
         <ul class="dropdown-menu">
             <li><a href="@Url.Action("Edit","Members")" class="menu-item">Quản lý hồ sơ cá nhân</a></li>
+            <li class="divider"></li>
+            <li><a href="@Url.Action("PasswordChange","Members")" class="menu-item">Thay đổi mật khẩu</a></li>
             <li class="divider"></li>
             <li><a id="logoutLink" href="javascript:;" class="menu-item">Thoát</a></li>
 
@@ -115,39 +131,14 @@ else
                 <div class="col-sm-6 col-sm-offset-3">
                     <div id="imaginary_container">
                         <div class="input-group stylish-input-group">
-                            @using (Html.BeginForm("KetQuaTimKiem", "Search", FormMethod.Post))
-                            {
-                                @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "form-control", @placeholder = "Nhập vào từ khóa cần tìm" })                          
-                            <span class="input-group-addon">
-                                <button type="submit">                            
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                            </span>
-                            }
+                            <ul class="nav navbar-nav">                               
+                               
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @*<div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div style="background-color:#426db5" class="input-group stylish-input-group" id="imaginary_container">
-                        <div class="input-group stylish-input-group" id="txtTimKiem">
-                            @using (Html.BeginForm("KetQuaTimKiem", "Search", FormMethod.Post))
-                            {
-                                @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "form-control", @placeholder = "Nhập vào từ khóa cần tìm" })
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                    <button type="submit"><img src="~/Imgs/search/search.png" /></button>
-                                </span>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>*@
-
                     <div class="row">
                         <div class="col-md-3">
                             <div class="panel panel-default">
@@ -178,26 +169,6 @@ else
 
                     </div>
                 </div>
-
-                <!-- Contact Section -->
-                @*<section id="contact" class="contact">
-                        <div class="contact-inner">
-                            <div id="google-map" class="google-map">
-                                <div id="googleMaps" class="google-map-container"></div>
-                            </div><!-- /#google-map -->
-                            <div class="form-area text-center wow animated fadeInRight" data-wow-delay=".75s">
-                                <h2 class="section-title"><span>Contact</span> With Us</h2><!-- /.section-title -->
-                                <form action="email.php" method="post" id="contactform" class="contactform">
-                                    <input id="name" class="form-control" name="name" type="text" placeholder="Name" value="" required>
-                                    <input id="email" class="form-control pull-right" name="email" type="email" placeholder="Email" value="" required>
-                                    <textarea id="message" class="form-control" name="message" placeholder="Your Message" rows="5" required></textarea>
-                                    <button name="submit" class="btn submit-btn" type="submit" id="submit">Send Message</button>
-                                </form><!-- /#contactform -->
-                            </div><!-- /.form-area -->
-                        </div><!-- /.contact-inner -->
-                    </section>*@
-                <!-- Contact Section -->
-
                 <div class="footer-bottom">
                     <div class="container">
                         <div class="footer-menu pull-left">
@@ -221,8 +192,6 @@ else
                 <script>window.jQuery || document.write('<script src="@Url.Content("~/Content/_Layout/")assets/js/jquery-1.11.2.min.js"><\/script>')</script>
                 <!-- Include WOW Min Js -->
                 <script src="@Url.Content("~/Content/_Layout/")assets/js/wow.min.js"></script>
-                <!-- Google Maps Script -->
-                <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
                 <!-- Gmap3.js For Static Maps -->
                 <script src="@Url.Content("~/Content/_Layout/")assets/js/gmap3.js"></script>
                 <!-- Include Waypoint Js -->

@@ -684,6 +684,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Edit.cs" />
     <Compile Include="Models\LoginVM.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
@@ -691,6 +692,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Password.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
@@ -710,6 +712,7 @@
       <DependentUpon>QLBH.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Register.cs" />
+    <Compile Include="Models\TopHomeIndex.cs" />
     <Compile Include="Models\User.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
@@ -781,13 +784,6 @@
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\README.md" />
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\tests\README.md" />
     <Content Include="Content\_Layout\assets\bootstrap-datepicker-master\bootstrap-datepicker-master\yarn.lock" />
-    <EntityDeploy Include="Models\QLBH.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLBH.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\QLBH.edmx.diagram">
-      <DependentUpon>QLBH.edmx</DependentUpon>
-    </Content>
     <Content Include="Views\Category\ListPartial.cshtml" />
     <Content Include="Views\Product\ByCat.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
@@ -797,15 +793,15 @@
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="bin\TEAMT2P.dll.config" />
+    <Content Include="Views\Members\PasswordChange.cshtml" />
     <Content Include="Views\Search\KetQuaTimKiem.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Category\Add.cshtml" />
-    <Content Include="Views\Category\Delete.cshtml" />
-    <Content Include="Views\Category\Edit.cshtml" />
-    <Content Include="Views\Category\Detail.cshtml" />
-    <Content Include="Views\Product\Add.cshtml" />
-    <Content Include="Views\Product\List.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
+    <EntityDeploy Include="Models\QLBH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QLBH.edmx.diagram">
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -814,6 +810,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Content\Login\" />
     <Folder Include="Imgs\sp\36\" />

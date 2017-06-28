@@ -1,8 +1,96 @@
-﻿
+﻿@using TEAMT2P.Models
+
+@model TopHomeIndex
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+
+    <div class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Top 5 giá cao nhất</a></li>
+            <li><a data-toggle="tab" href="#menu1">Top 5 theo lượt ra giá</a></li>
+            <li><a data-toggle="tab" href="#menu2">Top 5 gần kết thúc</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+             @if (Model.LstTop51.Count == 0)
+             {
+                <text> không có sản phẩm ! </text>
+             }
+             else
+             {
+                <div class="row">
+                    @foreach (var p in Model.LstTop51)
+                    {
+                        <div class="col-md-6">
+                            <div class="thumbnail">
+                                <img src="~/Imgs/sp/@p.ProID/main_thumbs.jpg" title="@p.ProName" />
+                                <div class="caption">
+                                    <h4>@p.ProName</h4>
+                                    <h4>Giá: @string.Format("{0:N0}", p.Price)</h4>
+                                    <h4>Tồn: @p.Quantity</h4>
+                                    <p>@p.TinyDes</p>
+                                    <p>
+                                        <a href="@Url.Action("Detail", "Product", new { id = @p.ProID})" class="btn btn-primary" role="button">
+                                            Chi Tiết
+                                        </a>
+                                        <a href="#" class="btn btn-success" role="button">
+                                            <i class="fa fa-cart-plus"></i>
+                                            Đặt mua
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+             }
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                @if (Model.LstTop52.Count == 0)
+                {
+                    <text> không có sản phẩm ! </text>
+                }
+                else
+                {
+                    <div class="row">
+                        @foreach (var p in Model.LstTop52)
+                        {
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    <img src="~/Imgs/sp/@p.ProID/main_thumbs.jpg" title="@p.ProName" />
+                                    <div class="caption">
+                                        <h4>@p.ProName</h4>
+                                        <h4>Giá: @string.Format("{0:N0}", p.Price)</h4>
+                                        <h4>Tồn: @p.Quantity</h4>
+                                        <p>@p.TinyDes</p>
+                                        <p>
+                                            <a href="@Url.Action("Detail", "Product", new { id = @p.ProID})" class="btn btn-primary" role="button">
+                                                Chi Tiết
+                                            </a>
+                                            <a href="#" class="btn btn-success" role="button">
+                                                <i class="fa fa-cart-plus"></i>
+                                                Đặt mua
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+            <div id="menu2" class="tab-pane fade">
+              
+            </div>
+        </div>
+
+    </div>
 
 
 
