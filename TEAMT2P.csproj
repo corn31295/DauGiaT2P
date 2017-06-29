@@ -676,11 +676,14 @@
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\WLController.cs" />
+    <Compile Include="Filters\CheckLoginAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CurrentContext.cs" />
     <Compile Include="Helpers\StringUtils.cs" />
+    <Compile Include="Helpers\WatchList.cs" />
     <Compile Include="Models\Category.cs">
       <DependentUpon>QLBH.tt</DependentUpon>
     </Compile>
@@ -802,6 +805,7 @@
     <Content Include="Models\QLBH.edmx.diagram">
       <DependentUpon>QLBH.edmx</DependentUpon>
     </Content>
+    <Content Include="Views\WL\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -815,6 +819,7 @@
     <Folder Include="Content\Login\" />
     <Folder Include="Imgs\sp\36\" />
     <Folder Include="Imgs\sp\43\" />
+    <Folder Include="Views\WatchList\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

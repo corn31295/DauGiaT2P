@@ -7,8 +7,11 @@ using TEAMT2P.Helpers;
 using TEAMT2P.Models;
 using BotDetect;
 using BotDetect.Web.Mvc;
+using TEAMT2P.Filters;
+
 namespace TEAMT2P.Controllers
 {
+    //[CheckLogin]
     public class AccountController : Controller
     {
         //

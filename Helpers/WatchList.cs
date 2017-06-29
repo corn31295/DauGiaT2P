@@ -15,9 +15,15 @@ namespace TEAMT2P.Helpers
             this.Items = new List<WLItem>();
         }
 
+
+
         public void AddItem(WLItem item)
         {
-            this.Items.Add(item);
+            var eItem = this.Items
+                .Where(i => i.Product.ProID == item.Product.ProID)
+                .FirstOrDefault();
+
+           this.Items.Add(item);
         }
     }
 

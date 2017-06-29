@@ -5,11 +5,14 @@ using System.Web;
 using System.Web.Mvc;
 using TEAMT2P.Helpers;
 using TEAMT2P.Models;
+using TEAMT2P.Filters;
 
 namespace TEAMT2P.Controllers
 {
+
     public class MembersController : Controller
     {
+        [CheckLogin]
         // GET: Members//Edit 
         public ActionResult Edit()
         {

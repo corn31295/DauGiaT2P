@@ -8,13 +8,15 @@ using TEAMT2P.Models;
 
 namespace TEAMT2P.Controllers
 {
+    //[CheckLogin]
     public class WLController : Controller
     {
         //
         // GET: WL
         public ActionResult Index()
         {
-            return View();
+            var wl = CurrentContext.GetWL();
+            return View(wl.Items);
         }
         //
         // POST: WL/Add
